@@ -1,0 +1,79 @@
+{
+  "1234567": {
+    "first_name": "Mike",
+    "last_name": "Bloom",
+    "pin": "1234",
+    "balance": 180.0,
+    "account_number": "1234567"
+  },
+  "1234": {
+    "first_name": "Jack",
+    "last_name": null,
+    "pin": "1234",
+    "balance": 3.5,
+    "account_number": "1234"
+  },
+  "null": {
+    "first_name": null,
+    "last_name": null,
+    "pin": null,
+    "balance": -1.0,
+    "account_number": null
+  },
+  "00001": {
+    "first_name": null,
+    "last_name": null,
+    "pin": "0000",
+    "balance": 1.0,
+    "account_number": "00001"
+  },
+  "493324": {
+    "first_name": "Nick",
+    "last_name": "Wood",
+    "pin": "1234",
+    "balance": 0,
+    "account_number": 493324
+  },
+  "646303": {
+    "first_name": "John",
+    "last_name": "Smith",
+    "pin": "2345",
+    "balance": 0,
+    "account_number": 646303
+  },
+  "404985": {
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "pin": "7894",
+    "balance": 0,
+    "account_number": 404985
+  },
+  "775618": {
+    "first_name": "Carter",
+    "last_name": "Adams",
+    "pin": "1782",
+    "balance": 90.0,
+    "account_number": 775618
+  },
+  "868681": {
+    "first_name": "Marie",
+    "last_name": "Curie",
+    "pin": "1818",
+    "balance": 0,
+    "account_number": 868681
+  },
+  "456533": {
+    "first_name": "Bob",
+    "last_name": "Beetle",
+    "pin": "8932",
+    "balance": 20.0,
+    "account_number": 456533
+  },
+  "775618": {
+    "first_name": "Carter",
+    "last_name": "Adams",
+    "pin": "1782",
+    "balance": 80.0,
+    "account_number": 775618
+  }
+}

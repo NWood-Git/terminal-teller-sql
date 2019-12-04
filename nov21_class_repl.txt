@@ -1,0 +1,51 @@
+~/Today/Nov-11-cohort/21-Nov-Week2Thu/tteller  
+(ins)2003 $ python3
+Python 3.7.5rc1 (default, Oct  8 2019, 16:47:45) 
+[GCC 9.2.1 20191008] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(ins)>>> import app.model as m
+(ins)>>> me = m.Account(first_name="Carter", last_name="Adams", pin="1111", account_number="517", balance=100.0)
+(ins)>>> values = {"first_name": "Carter", "last_name": "Adams", "pin": "1111", "account_number": "517", "balance": 100.0}
+(ins)>>> me = m.Account(**values)
+(ins)>>> me.pin
+'1111'
+(ins)>>> reload(m)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'reload' is not defined
+(ins)>>> from importlib import reload
+(ins)>>> reload(m)
+<module 'app.model' from '/home/redcartel/Dropbox/HOME/Today/Nov-11-cohort/21-Nov-Week2Thu/tteller/app/model.py'>
+(ins)>>> person = m.Account.from_account_number("1234567")
+(ins)>>> person.first_name
+'Mike'
+(ins)>>> person.last_name
+'Bloom'
+(ins)>>> person.balance
+100.0
+(ins)>>> person.balance += 50
+(ins)>>> person.save()
+(ins)>>> reload(m)
+<module 'app.model' from '/home/redcartel/Dropbox/HOME/Today/Nov-11-cohort/21-Nov-Week2Thu/tteller/app/model.py'>
+(ins)>>> jack = m.Account.login("1234", "1234")
+(ins)>>> jack
+<app.model.Account object at 0x7f9134a60750>
+(ins)>>> jack.first_name
+'Jack'
+(ins)>>> jack = m.Account.login("1234", "1111")
+(ins)>>> jack
+(ins)>>> type(5)
+<class 'int'>
+(ins)>>> type(5).__name__
+'int'
+(ins)>>> reload(m)
+<module 'app.model' from '/home/redcartel/Dropbox/HOME/Today/Nov-11-cohort/21-Nov-Week2Thu/tteller/app/model.py'>
+(ins)>>> jack = m.Account.login("1234", "1234")
+(ins)>>> jack
+<Account {'account_number': '1234', 'first_name': 'Jack', 'last_name': None, 'pin': '1234', 'balance': 3.5}>
+(ins)>>> type(ValueError)
+<class 'type'>
+(ins)>>> type(ValueError("message")
+(ins)... )
+<class 'ValueError'>
+(ins)>>> 

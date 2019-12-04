@@ -1,0 +1,1 @@
+This folder, terminal_teller_sql, copied the contents of the terminal_teller folder on 11/27/2019 @ ~11:30AM
