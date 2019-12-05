@@ -45,26 +45,6 @@ def login_menu():
             else:
                 pass ###TODO - 4- here for invald credentials error
 
-# def create_account(): #SUCESSFULL UPDATED for SQL ###TODO - make sure this adds a class 12/3/2019 ~8PM
-#     """ call this from the main login loop """
-#     account_number = new_acct_num()
-#     print(account_number) #testing line
-#     first_name = view.input_first_name() 
-#     last_name = view.input_last_name()
-#     pin = new_cust_pin()
-#     print(pin) #testing line
-#     balance = 0
-#     with sqlite3.connect(DBPATH) as connection:
-#         cursor = connection.cursor()
-#         sql_data = {"account_number" : account_number,
-#                     "first_name": first_name,
-#                     "last_name": last_name,
-#                     "pin": pin,
-#                     "balance" : balance}
-#         INSERT_SQL = """INSERT INTO accounts(account_number, first_name, last_name, pin, balance)
-#                     VALUES (:account_number, :first_name, :last_name, :pin, :balance);"""
-#         cursor.execute(INSERT_SQL, sql_data)
-#         #return cursor.lastrowid
 
 def create_account():
     """ call this from the main login loop """
@@ -84,7 +64,6 @@ def login_attempt(): ## TODO: is this done?
     while True:
         account_number, pin = view.user_login_attempt()
         account = model.Account.login(account_number, pin)
-        #print(account.account_number)
         return account   
 
 def main_menu(user): #TODO: Complete this function
@@ -141,7 +120,7 @@ def new_cust_pin(): #this goes in model or controller? It talks with views - als
             if new_pin == confirm_pin:
                 pin = new_pin
                 view.good_pin(pin)
-                return pin                
+                return pin
             else:
                 view.inconsistent_pin()
 
